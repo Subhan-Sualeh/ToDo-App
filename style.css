@@ -1,0 +1,115 @@
+body{
+    background: linear-gradient(to right, #7aecfb, #54abf7);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+font-family: 'Varela Round', sans-serif;
+
+}
+.whiteMode{
+    background: linear-gradient(to right, #434343, #000000); 
+}
+.yellow{
+    background: linear-gradient(to right, #c02425, #f0cb35);
+    color: white;
+}
+
+ul{
+    margin-top: 5%;
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0;
+}
+li{
+    box-shadow: 0 0 5px 1px rgb(87, 87, 87);
+    border-radius: 20px;
+    margin: 0.7rem 0;
+    text-align: center;
+    padding: 5px;
+}
+.purple{
+    color: rgb(32, 32, 32);
+    border-radius: 10px;
+}
+button{
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: #0575e6;
+    margin: 0px 3px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-size: 3rem;
+    padding: 0px 0;
+    color: #5e5e5e;
+    font-family: 'Lobster', cursive;
+
+}
+.todoBG{
+    background-color:white ;
+    padding: 15px 30px;
+    border-radius:20px ;
+    font-size: 2rem;
+}
+.complete{
+    text-decoration: line-through #0575e6 2px;
+    opacity: 0.6;
+}
+hr{
+    padding: 2px;
+    background: linear-gradient(to right, #7aecfb, #54abf7);
+    border: none;
+}
+h3{
+    text-align: center;
+}
+.newTask{
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.newTask button{
+    color: white;
+    background: #0575e6 ;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.enable{
+    display: block;
+}
+.disable{
+    display: none;
+}
+.newTXT input{
+    padding: 5px 20px;
+    font-size:1.2rem ;
+    width: 60%;
+}
+.remove{
+    display: none;
+}
+@media only screen and (max-width: 720px){
+    body{
+        display: block;
+        margin-top: 2px;
+        background: white ;
+    }
+    ul{
+        font-size: 0.9rem;
+    } 
+    .todoBG{
+        padding: 4px 8px;
+    }
+          
+}

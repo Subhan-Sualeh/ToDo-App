@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Varela+Round&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ToDo Web</title>
+</head>
+<body id="bG">
+
+    <div class="todoBG">
+       <!-- <button onclick="white()"><h1>White</h1></button> -->
+
+       <div class="purple"><h2>Whats Up , <span id="userName"></span></h2></div>
+       <hr> 
+       <div class="TodoMain">
+        <h3>All Tasks ,</h3>
+        <div class="newTask">
+            <button onclick="trigInput()"><i class="fa-solid fa-circle-plus"></i> New Task</button>
+            <div class="newTXT disable" id="enbInput">
+              <input type="text" name="" id="newTaskTxt"><button type="submit" onclick="submit()">Add</button>
+            </div>
+        </div>
+        <ul id="tasks">
+            <!-- Tasks Will Be Written Through JavaScript -->
+        </ul>    
+       </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
