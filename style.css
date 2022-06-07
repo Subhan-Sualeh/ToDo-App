@@ -16,10 +16,11 @@ font-family: 'Varela Round', sans-serif;
 }
 
 ul{
-    margin-top: 5%;
+    margin-top: 7%;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 0;
+    width: 500px;
 }
 li{
     box-shadow: 0 0 5px 1px rgb(87, 87, 87);
@@ -27,11 +28,17 @@ li{
     margin: 0.7rem 0;
     text-align: center;
     padding: 5px;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: normal;
+    padding: 10px;
 }
 .purple{
     color: rgb(32, 32, 32);
     border-radius: 10px;
 }
+
 button{
     border: none;
     background-color: transparent;
@@ -55,6 +62,8 @@ h2{
     padding: 15px 30px;
     border-radius:20px ;
     font-size: 2rem;
+    min-width: 400px;
+    max-width: 500px;
 }
 .complete{
     text-decoration: line-through #0575e6 2px;
@@ -95,6 +104,20 @@ h3{
     padding: 5px 20px;
     font-size:1.2rem ;
     width: 60%;
+    border: none;
+    border-bottom: #0575e6 solid 2px;
+    outline: none;
+}
+input:focus{
+    border-bottom: #0575e6 2px solid;
+    /* border-style: none; */
+
+}
+input :valid{
+    border-bottom: #0575e6 2px solid;
+}
+ul{
+    width: 93%;
 }
 .remove{
     display: none;
@@ -106,10 +129,19 @@ h3{
         background: white ;
     }
     ul{
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     } 
     .todoBG{
         padding: 4px 8px;
+        width: 98%;
+        min-width: auto;
+        max-width: none;
     }
           
+}
+@media only screen and (max-width: 400px){
+
+.todoBG{
+    padding: 2px 6px;
+}
 }

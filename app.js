@@ -1,20 +1,29 @@
+
 // var Name = prompt("So Whats Your Name")
+
 // var showName = document.getElementById("userName")
 
+// Name = Name.toLowerCase()
+
+// var first = Name.charAt(0).toUpperCase()
+
+// var show = first + Name.slice(1)
 
 // if(Name == ""){
 //     showName.innerHTML = "My Boy"
 // }
 // else{
-//     showName.innerHTML= Name
+//     showName.innerHTML= show
 // }
 var todoList = document.getElementById("tasks")
 
-function white(){
-    var backG = document.getElementById("bG")
+todoList.value = ""
+
+// function white(){
+//     var backG = document.getElementById("bG")
     
-    backG.classList.toggle("whiteMode")
-}
+//     backG.classList.toggle("whiteMode")
+// }
 
 function trigInput(){
     var enbInput = document.getElementById("enbInput")
@@ -28,50 +37,43 @@ function trigInput(){
 
 }
 
-var array = []
-var valuES = array
 
 function submit(){
     var  taskValue = document.getElementById("newTaskTxt")
-    taskValue = taskValue.value
 
-    array.push(taskValue)
+    var li= document.createElement("li")
 
-    // console.log(array)
+    li.innerHTML = taskValue.value + '<button onclick="complete(this)"><i class="fa-solid fa-check"></i></button><button onclick="dele(this)"><i class="fa-solid fa-trash-can"></i></button>'
 
-    valuES = array
+    todoList.appendChild(li)
 
-    showTasks(valuES)
+    taskValue.value = ""
 
-    return valuES ;
+    var enbInput = document.getElementById("enbInput")
+
+    enbInput.classList.replace("enable" , "disable")
 
 }
 
-function showTasks(valuES){
-    var newLi= ""
-    valuES.forEach((element , index ) => {
-        newLi += '<li><button onclick="complete('+index+')"><i class="fa-solid fa-check"></i></button><span class="taskTxt">' + element + '</span><button onclick="dele('+index+')"><i class="fa-solid fa-trash-can"></i></button></li>'  
-    });
-    todoList.innerHTML = newLi
+function complete(e){
+
+    var comp = e.parentNode
+
+    comp.classList.toggle("complete")
+
 }
 
-function complete(num){
+function dele(e){
 
-    var liComplete = todoList.getElementsByTagName("li")
-
-    liComplete[num].classList.toggle("complete")    
-}
-
-// var lidele = todoList.getElementsByTagName("li") 
-// function dele(num){
-
-// lidele = document.getElementsByTagName("li") 
-
-//  var newVa = lidele[num]
-
-//  newVa = newVa.splice
- 
-
-
+ e.parentNode.remove()
   
+}
+
+// var deleAll = document.getElementById("delall")
+
+// if(todoList.value = ""){
+//     deleAll.classList.replace("enable" , "disable")
 // }
+// // else{
+// //     deleAll.classList.replace("disable" ,"enable" )
+// // }
